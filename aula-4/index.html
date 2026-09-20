@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Pesquisa sobre saúde mental acadêmica</title>
+    </head>
+    <body>
+        <header class="header-info">
+            <h1>Pesquisa sobre saúde mental acadêmica</h1>
+        </header>
+        <main>
+            <section>
+                <h2>Cadastro</h2>
+                <form action="https://postman-echo.com/post" method="post" enctype="multipart/form-data">
+                    <p>Preencha o formulário para participar da pesquisa: </p>
+                    <fieldset>
+                        <legend>Dados pessoais</legend>
+                        <div>
+                            <label for="nome_id">Nome completo:</label>
+                            <input id="nome_id" name="nome" type="text" placeholder="Fulano de Tal">
+                        </div>
+                        <div>
+                            <label for="telefone_id">Telefone:</label>
+                            <input id="telefone_id" name="telefone" type="tel" required>
+                        </div>
+                        <div>
+                            <label for="email_id">E-mail:</label>
+                            <input id="email_id" name="email" type="email" placeholder="aluno@cs.up.edu.br">
+                        </div>
+                        <div>
+                            <label for="data_nasc_id">Data de Nascimento:</label>
+                            <input id="data_nasc_id" name="data_nasc" type="date">
+                        </div>
+                        <div>
+                            <label for="semestre_id">Semestre atual:</label>
+                            <input id="semestre_id" name="semestre" type="number" min="1" max="12">
+                        </div>
+                        <div>
+                            <label for="rgm_id">RGM:</label>
+                            <input id="rgm_id"  
+                                   name="rgm"
+                                   type="text"
+                                   pattern="\d{8}\-\d{1}"
+                                   title="Digite no formato 00000000-0"
+                                   required>
+                        </div>
+                        <div>
+                            <label for="cpf_id">CPF:</label>
+                            <input
+                                   id="cpf_id"
+                                   name="cpf"
+                                   type="text"
+                                   pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                                   title="Digite no formato 000.000.000-00"
+                                   required>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Escreva sobre você:</legend>
+                        <div>
+                            <label for="sobre_voce_id">Resumo de sua saúde mental</label>
+                            <textarea id="sobre_voce_id"
+                                      name="sobrevoce"
+                                      rows="4" 
+                                      cols="50"></textarea>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Qual nível você considera sua saúde mental atualmente:</legend>
+                        <div>
+                            <input id="nivel_excelente_id"
+                                   name="nivel"
+                                   type="radio"
+                                   value="excelente">
+                            <label for="nivel_excelente_id">Excelente</label>
+                        </div>
+                        <div>
+                            <input id="nivel_bom_id"
+                                   name="nivel"
+                                   type="radio"
+                                   value="bom">
+                            <label for="nivel_bom_id">Bom</label>
+                        </div>
+                         <div>
+                            <input id="nivel_moderado_id"
+                                   name="nivel"
+                                   type="radio"
+                                   value="moderado">
+                            <label for="nivel_moderado_id">Moderado</label>
+                        </div>
+                         <div>
+                            <input id="nivel_ruim_id"
+                                   name="nivel"
+                                   type="radio"
+                                   value="ruim">
+                            <label for="nivel_ruim_id">Ruim</label>
+                        </div>
+                        <div>
+                            <input id="nivel_muitoruim_id"
+                                   name="nivel"
+                                   type="radio"
+                                   value="muitoruim">
+                            <label for="nivel_muitoruim_id">Muito Ruim</label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Sobre terapia:</legend>
+                        <div>
+                            <label for="momento_id">No momento</label>
+                            <select id="momento_id" name="momento">
+                                <option value="faco">Já faço</option>
+                                <option value="considero">Considero</option>
+                                <option value="naofaria">Não Faria</option>
+                            </select>
+                        </div>
+                        <div>
+                        <button type="reset">Limpar dados</button>
+                        <button type="submit">Enviar Pesquisa</button>
+                        </div>
+                    </fieldset>
+                </form>        
+            </section>
+        </main>
+        <footer>
+            <p>Dados coletados apenas para fins acadêmicos</p>
+        </footer>
+    </body>
+</html>
