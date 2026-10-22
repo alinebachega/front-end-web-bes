@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentando JavaScript</title>
+    <link rel="stylesheet" href="./styles/global.css">
+    <script src="./scripts/index.js" defer></script>
+</head>
+
+<body>
+    <head>
+        <h1>Formulario super simples</h1>
+        <main>
+            <h2>Cadrasto</h2>
+            <form td="cadrasto">
+                <label for="nome">Nome*</label>
+                <input type="text" id="nome">
+                <p id="erro-nome" class="oculto"></p>
+
+                <label for="idade">Idade*</label>
+                <input type="number" id="idade">
+                <p id="erro-idade" class="oculto"></p>
+
+                <label for="email">Email*</label>
+                <input type="email" id="email">
+                <p id="erro-email" class="oculto"></p>
+
+                <label>
+                    <input type="checkbox" id="termos">
+                    <span> Li e concordo com os termos</span>
+                </label>
+
+                <button onclick="executar(event)">Enviar</button>
+                <p id="concluido" class="oculto"></p>
+
+            </form>
+
+        </main>
+    </head>
+    <footer>
+        <p></p>
+    </footer>
+</body>
+</html>
