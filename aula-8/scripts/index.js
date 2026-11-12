@@ -16,22 +16,22 @@ async function chamarApi() {
     email: document.querySelector("#email"),
   };
 
-  try {
-    const resposta = await fetch("https://postman-echo.com/post)", {
+ try {
+    const resposta = await fetch("https://postman-echo.com/post", {
       method: "POST",
-      headers: { "Contente-type": "application/json"},
-      body> JSON.stringify(dados),
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(dados),
     });
 
     if (!resposta.ok) {
-      throw new Error("Erro desconhecido ao falar com o servidor");
+      throw new Error(`Erro ${resposta.status}: ${resposta.statusText}`);
     }
 
-    const resuktadi = await resposta.json();
-
+    const resultado = await resposta.json();
+    alert(`Cadastro realizado com sucesso, ${resultado.json.email}!`);
   } catch (erro) {
-    alert(`ERRO!: ${erro.message}`);
-
+    alert("Não foi possível enviar o cadastro: " + erro.message);
+  }
 }
 
 
